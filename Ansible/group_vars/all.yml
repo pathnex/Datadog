@@ -1,0 +1,42 @@
+datadog_api_key: "7f94d142ea29fb650d0be73c1b9531e3"   # Change this with your API Key
+datadog_site: "us5.datadoghq.com"                     # If this doesn't work, Change this with another datadog site
+
+# Tags
+datadog_tags:
+  - "env:production"
+  - "team:devops"
+  - "project:k8s-cluster"
+  - "Batch:March2026"
+  - "Study:Free"
+  - "Organisation:Pathnex"
+
+# Enable logs
+datadog_logs_enabled: true
+
+# Enable APM (tracing)
+datadog_apm_enabled: true
+
+# Process monitoring
+datadog_process_agent_enabled: true
+
+# Enable network monitoring
+datadog_system_probe_enabled: true
+datadog_network_monitoring_enabled: true
+
+# Runtime security (optional but powerful)
+datadog_runtime_security_config_enabled: true
+
+# Collect system logs example
+datadog_logs_config:
+  - type: file
+    path: /var/log/syslog
+    service: system
+    source: syslog
+
+
+# Custom host name (optional)
+datadog_hostname: "{{ inventory_hostname }}"
+
+# Enable live process collection
+datadog_process_config:
+  enabled: "true"
