@@ -6,7 +6,6 @@ variable "datadog_api_key" {
 variable "datadog_app_key" {
   default   = "ddapp_19K3aIeZRLbgmM0vR2cPg3pkz51toHIV"  # Change this value with your APP KEY
   type      = string
-  type      = string
  # sensitive = true
 }
 
